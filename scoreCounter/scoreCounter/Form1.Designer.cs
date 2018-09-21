@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.contestant1TextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.contestant2TextBox = new System.Windows.Forms.TextBox();
+            this.updateContestantsButton = new System.Windows.Forms.Button();
+            this.Participant1Label = new System.Windows.Forms.Label();
+            this.Participant2Label = new System.Windows.Forms.Label();
+            this.contestant1ScoreLabel = new System.Windows.Forms.Label();
+            this.contestant1MinusButton = new System.Windows.Forms.Button();
+            this.contestant1PlusButton = new System.Windows.Forms.Button();
+            this.contestant2MinusButton = new System.Windows.Forms.Button();
+            this.contestant2ScoreLabel = new System.Windows.Forms.Label();
+            this.contestant2PlusButton = new System.Windows.Forms.Button();
+            this.roundLabel = new System.Windows.Forms.Label();
+            this.roundNumberLabel = new System.Windows.Forms.Label();
+            this.plusRoundButton = new System.Windows.Forms.Button();
+            this.minusRoundButton = new System.Windows.Forms.Button();
+            this.newMatchButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // contestant1TextBox
@@ -54,174 +54,173 @@
             this.contestant1TextBox.Size = new System.Drawing.Size(281, 35);
             this.contestant1TextBox.TabIndex = 0;
             // 
-            // textBox1
+            // contestant2TextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(400, 106);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(281, 35);
-            this.textBox1.TabIndex = 1;
+            this.contestant2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contestant2TextBox.Location = new System.Drawing.Point(400, 106);
+            this.contestant2TextBox.Name = "contestant2TextBox";
+            this.contestant2TextBox.Size = new System.Drawing.Size(281, 35);
+            this.contestant2TextBox.TabIndex = 1;
             // 
-            // button1
+            // updateContestantsButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(231, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(239, 43);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Update Contestants";
-            this.button1.UseVisualStyleBackColor = true;
+            this.updateContestantsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateContestantsButton.Location = new System.Drawing.Point(231, 12);
+            this.updateContestantsButton.Name = "updateContestantsButton";
+            this.updateContestantsButton.Size = new System.Drawing.Size(239, 43);
+            this.updateContestantsButton.TabIndex = 2;
+            this.updateContestantsButton.Text = "Update Contestants";
+            this.updateContestantsButton.UseVisualStyleBackColor = true;
+            this.updateContestantsButton.Click += new System.EventHandler(this.updateContestantsButton_Click);
             // 
-            // label1
+            // Participant1Label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 29);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Participant #1 (Red)";
+            this.Participant1Label.AutoSize = true;
+            this.Participant1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Participant1Label.Location = new System.Drawing.Point(40, 74);
+            this.Participant1Label.Name = "Participant1Label";
+            this.Participant1Label.Size = new System.Drawing.Size(225, 29);
+            this.Participant1Label.TabIndex = 3;
+            this.Participant1Label.Text = "Participant #1 (Red)";
             // 
-            // label2
+            // Participant2Label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(432, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(229, 29);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Participant #2 (Blue)";
+            this.Participant2Label.AutoSize = true;
+            this.Participant2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Participant2Label.Location = new System.Drawing.Point(432, 74);
+            this.Participant2Label.Name = "Participant2Label";
+            this.Participant2Label.Size = new System.Drawing.Size(229, 29);
+            this.Participant2Label.TabIndex = 4;
+            this.Participant2Label.Text = "Participant #2 (Blue)";
             // 
-            // label3
+            // contestant1ScoreLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(124, 144);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 55);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "0";
+            this.contestant1ScoreLabel.AutoSize = true;
+            this.contestant1ScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contestant1ScoreLabel.Location = new System.Drawing.Point(124, 144);
+            this.contestant1ScoreLabel.Name = "contestant1ScoreLabel";
+            this.contestant1ScoreLabel.Size = new System.Drawing.Size(0, 55);
+            this.contestant1ScoreLabel.TabIndex = 5;
             // 
-            // button2
+            // contestant1MinusButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(12, 147);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 52);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
+            this.contestant1MinusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contestant1MinusButton.Location = new System.Drawing.Point(12, 147);
+            this.contestant1MinusButton.Name = "contestant1MinusButton";
+            this.contestant1MinusButton.Size = new System.Drawing.Size(78, 52);
+            this.contestant1MinusButton.TabIndex = 6;
+            this.contestant1MinusButton.Text = "-";
+            this.contestant1MinusButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // contestant1PlusButton
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(215, 147);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(78, 52);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "+";
-            this.button3.UseVisualStyleBackColor = true;
+            this.contestant1PlusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contestant1PlusButton.Location = new System.Drawing.Point(215, 147);
+            this.contestant1PlusButton.Name = "contestant1PlusButton";
+            this.contestant1PlusButton.Size = new System.Drawing.Size(78, 52);
+            this.contestant1PlusButton.TabIndex = 7;
+            this.contestant1PlusButton.Text = "+";
+            this.contestant1PlusButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // contestant2MinusButton
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(400, 149);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(78, 52);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "-";
-            this.button4.UseVisualStyleBackColor = true;
+            this.contestant2MinusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contestant2MinusButton.Location = new System.Drawing.Point(400, 149);
+            this.contestant2MinusButton.Name = "contestant2MinusButton";
+            this.contestant2MinusButton.Size = new System.Drawing.Size(78, 52);
+            this.contestant2MinusButton.TabIndex = 8;
+            this.contestant2MinusButton.Text = "-";
+            this.contestant2MinusButton.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // contestant2ScoreLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(515, 147);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 55);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "0";
+            this.contestant2ScoreLabel.AutoSize = true;
+            this.contestant2ScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contestant2ScoreLabel.Location = new System.Drawing.Point(515, 147);
+            this.contestant2ScoreLabel.Name = "contestant2ScoreLabel";
+            this.contestant2ScoreLabel.Size = new System.Drawing.Size(0, 55);
+            this.contestant2ScoreLabel.TabIndex = 9;
             // 
-            // button5
+            // contestant2PlusButton
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(603, 149);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(78, 52);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "+";
-            this.button5.UseVisualStyleBackColor = true;
+            this.contestant2PlusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contestant2PlusButton.Location = new System.Drawing.Point(603, 149);
+            this.contestant2PlusButton.Name = "contestant2PlusButton";
+            this.contestant2PlusButton.Size = new System.Drawing.Size(78, 52);
+            this.contestant2PlusButton.TabIndex = 10;
+            this.contestant2PlusButton.Text = "+";
+            this.contestant2PlusButton.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // roundLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(296, 216);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 33);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Round";
+            this.roundLabel.AutoSize = true;
+            this.roundLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundLabel.Location = new System.Drawing.Point(296, 216);
+            this.roundLabel.Name = "roundLabel";
+            this.roundLabel.Size = new System.Drawing.Size(105, 33);
+            this.roundLabel.TabIndex = 11;
+            this.roundLabel.Text = "Round";
             // 
-            // label6
+            // roundNumberLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(323, 249);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 55);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "1";
+            this.roundNumberLabel.AutoSize = true;
+            this.roundNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundNumberLabel.Location = new System.Drawing.Point(323, 249);
+            this.roundNumberLabel.Name = "roundNumberLabel";
+            this.roundNumberLabel.Size = new System.Drawing.Size(51, 55);
+            this.roundNumberLabel.TabIndex = 12;
+            this.roundNumberLabel.Text = "1";
             // 
-            // button6
+            // plusRoundButton
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(380, 252);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(62, 52);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "►";
-            this.button6.UseVisualStyleBackColor = true;
+            this.plusRoundButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plusRoundButton.Location = new System.Drawing.Point(380, 252);
+            this.plusRoundButton.Name = "plusRoundButton";
+            this.plusRoundButton.Size = new System.Drawing.Size(62, 52);
+            this.plusRoundButton.TabIndex = 13;
+            this.plusRoundButton.Text = "►";
+            this.plusRoundButton.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // minusRoundButton
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(255, 252);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(62, 52);
-            this.button7.TabIndex = 14;
-            this.button7.Text = "◄";
-            this.button7.UseVisualStyleBackColor = true;
+            this.minusRoundButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minusRoundButton.Location = new System.Drawing.Point(255, 252);
+            this.minusRoundButton.Name = "minusRoundButton";
+            this.minusRoundButton.Size = new System.Drawing.Size(62, 52);
+            this.minusRoundButton.TabIndex = 14;
+            this.minusRoundButton.Text = "◄";
+            this.minusRoundButton.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // newMatchButton
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(255, 326);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(187, 43);
-            this.button8.TabIndex = 15;
-            this.button8.Text = "New Match";
-            this.button8.UseVisualStyleBackColor = true;
+            this.newMatchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newMatchButton.Location = new System.Drawing.Point(255, 326);
+            this.newMatchButton.Name = "newMatchButton";
+            this.newMatchButton.Size = new System.Drawing.Size(187, 43);
+            this.newMatchButton.TabIndex = 15;
+            this.newMatchButton.Text = "New Match";
+            this.newMatchButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 379);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.newMatchButton);
+            this.Controls.Add(this.minusRoundButton);
+            this.Controls.Add(this.plusRoundButton);
+            this.Controls.Add(this.roundNumberLabel);
+            this.Controls.Add(this.roundLabel);
+            this.Controls.Add(this.contestant2PlusButton);
+            this.Controls.Add(this.contestant2ScoreLabel);
+            this.Controls.Add(this.contestant2MinusButton);
+            this.Controls.Add(this.contestant1PlusButton);
+            this.Controls.Add(this.contestant1MinusButton);
+            this.Controls.Add(this.contestant1ScoreLabel);
+            this.Controls.Add(this.Participant2Label);
+            this.Controls.Add(this.Participant1Label);
+            this.Controls.Add(this.updateContestantsButton);
+            this.Controls.Add(this.contestant2TextBox);
             this.Controls.Add(this.contestant1TextBox);
             this.Name = "Form1";
             this.Text = "Saber Legion Score Counter";
@@ -233,21 +232,21 @@
         #endregion
 
         private System.Windows.Forms.TextBox contestant1TextBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox contestant2TextBox;
+        private System.Windows.Forms.Button updateContestantsButton;
+        private System.Windows.Forms.Label Participant1Label;
+        private System.Windows.Forms.Label Participant2Label;
+        private System.Windows.Forms.Label contestant1ScoreLabel;
+        private System.Windows.Forms.Button contestant1MinusButton;
+        private System.Windows.Forms.Button contestant1PlusButton;
+        private System.Windows.Forms.Button contestant2MinusButton;
+        private System.Windows.Forms.Label contestant2ScoreLabel;
+        private System.Windows.Forms.Button contestant2PlusButton;
+        private System.Windows.Forms.Label roundLabel;
+        private System.Windows.Forms.Label roundNumberLabel;
+        private System.Windows.Forms.Button plusRoundButton;
+        private System.Windows.Forms.Button minusRoundButton;
+        private System.Windows.Forms.Button newMatchButton;
     }
 }
 

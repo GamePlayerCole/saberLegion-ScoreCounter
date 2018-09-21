@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using System.IO;
 
 namespace scoreCounter
@@ -26,41 +25,12 @@ namespace scoreCounter
 
         static void CheckRequiredFiles()
         {
-            //Contestant 1 Files
-            if(File.Exists("contestant1.txt"))
-            {
-                //Do Nothing
-            }
-            else
-            {
-                File.Create("contestant1.txt");
-            }
-            if (File.Exists("contestant1Score.txt"))
-            {
-                //Do Nothing
-            }
-            else
-            {
-                File.Create("contestant1Score.txt");
-            }
-
-            //Contestant 2 Files
-            if (File.Exists("contestant2.txt"))
-            {
-                //Do Nothing
-            }
-            else
-            {
-                File.Create("contestant2.txt");
-            }
-            if (File.Exists("contestant2Score.txt"))
-            {
-                //Do Nothing
-            }
-            else
-            {
-                File.Create("contestant2Score.txt");
-            }
+            //Creates seperate files for each one since OBS can not parse file data into seperate sources.
+            File.WriteAllText("contestant1.txt", String.Empty);
+            File.WriteAllText("contestant1Score.txt", "0");
+            File.WriteAllText("contestant2.txt", String.Empty);
+            File.WriteAllText("contestant2Score.txt", "0");
+            File.WriteAllText("roundNumber.txt", "1");
         }
     }
 }
