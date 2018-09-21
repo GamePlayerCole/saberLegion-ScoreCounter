@@ -69,7 +69,7 @@
             this.updateContestantsButton.Name = "updateContestantsButton";
             this.updateContestantsButton.Size = new System.Drawing.Size(239, 43);
             this.updateContestantsButton.TabIndex = 2;
-            this.updateContestantsButton.Text = "Update Contestants";
+            this.updateContestantsButton.Text = "Update Participants";
             this.updateContestantsButton.UseVisualStyleBackColor = true;
             this.updateContestantsButton.Click += new System.EventHandler(this.updateContestantsButton_Click);
             // 
@@ -111,6 +111,7 @@
             this.contestant1MinusButton.TabIndex = 6;
             this.contestant1MinusButton.Text = "-";
             this.contestant1MinusButton.UseVisualStyleBackColor = true;
+            this.contestant1MinusButton.Click += new System.EventHandler(this.contestant1MinusButton_Click);
             // 
             // contestant1PlusButton
             // 
@@ -121,6 +122,7 @@
             this.contestant1PlusButton.TabIndex = 7;
             this.contestant1PlusButton.Text = "+";
             this.contestant1PlusButton.UseVisualStyleBackColor = true;
+            this.contestant1PlusButton.Click += new System.EventHandler(this.contestant1PlusButton_Click);
             // 
             // contestant2MinusButton
             // 
@@ -131,6 +133,7 @@
             this.contestant2MinusButton.TabIndex = 8;
             this.contestant2MinusButton.Text = "-";
             this.contestant2MinusButton.UseVisualStyleBackColor = true;
+            this.contestant2MinusButton.Click += new System.EventHandler(this.contestant2MinusButton_Click);
             // 
             // contestant2ScoreLabel
             // 
@@ -150,6 +153,7 @@
             this.contestant2PlusButton.TabIndex = 10;
             this.contestant2PlusButton.Text = "+";
             this.contestant2PlusButton.UseVisualStyleBackColor = true;
+            this.contestant2PlusButton.Click += new System.EventHandler(this.contestant2PlusButton_Click);
             // 
             // roundLabel
             // 
@@ -180,6 +184,7 @@
             this.plusRoundButton.TabIndex = 13;
             this.plusRoundButton.Text = "►";
             this.plusRoundButton.UseVisualStyleBackColor = true;
+            this.plusRoundButton.Click += new System.EventHandler(this.plusRoundButton_Click);
             // 
             // minusRoundButton
             // 
@@ -190,6 +195,7 @@
             this.minusRoundButton.TabIndex = 14;
             this.minusRoundButton.Text = "◄";
             this.minusRoundButton.UseVisualStyleBackColor = true;
+            this.minusRoundButton.Click += new System.EventHandler(this.minusRoundButton_Click);
             // 
             // newMatchButton
             // 
@@ -200,6 +206,7 @@
             this.newMatchButton.TabIndex = 15;
             this.newMatchButton.Text = "New Match";
             this.newMatchButton.UseVisualStyleBackColor = true;
+            this.newMatchButton.Click += new System.EventHandler(this.newMatchButton_Click);
             // 
             // Form1
             // 
